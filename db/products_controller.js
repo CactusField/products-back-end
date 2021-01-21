@@ -3,7 +3,7 @@ module.exports = {
       const dbInstance = req.app.get('db');
   
       dbInstance.create_product()
-        .then( () => res.sendStatus(200) )
+        .then( () => res.sendStatus(200))
         .catch( err => {
           res.status(500).send({errorMessage: "Oops! Something went wrong. Our engineers have been informed!"});
           console.log(err)
